@@ -22,17 +22,22 @@ body {
 }
 
 .slide {
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #fff;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
   width: 100%;
-  height: calc((100vh - 47.2vw)/2);
+  height: max(calc((100vh - 47.2vw)/2), 20%);
+  max-height: 20%;
   position: relative;
-  transition: height 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.slide img{
+  height: 100%;
+  width: min(100%, 127vh);
 }
 
 .slide.active {
+  max-height: 60%;
   height: 47.2vw;
 }
