@@ -34,7 +34,7 @@ const gotoNum = number => {
    }
 
    if (next2 >= slides.length -1) {
-      next2 = next+1
+      next2 = next<slides.length-1? next+1:0
    }
 
    if (prev == -1) {
