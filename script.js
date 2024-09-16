@@ -2,10 +2,12 @@ const slides = document.querySelectorAll(".slider__item");
 const slider=document.querySelector(".slider__vrapp")
 
 let current = 0;
-let prev;
-let next;
-let prev2;
-let next2;
+let touchStartY=0
+
+window.addEventListener("touchstart", ev => {
+   touchStartY= ev.touches[0].clientY
+})
+
 document.addEventListener('DOMContentLoaded',()=>{
    gotoNum(current);
 });
@@ -45,6 +47,8 @@ const gotoNum = number => {
       slides[i].style.maxHeight=""
    }
 
+   touchStartY=undefined
+
    window.removeEventListener("wheel", handleWheel)
    setTimeout(()=>{
       window.addEventListener("wheel", handleWheel)
@@ -76,3 +80,13 @@ const handleWheel = (ev) => {
       gotoPrev()
 }
 window.addEventListener("wheel", handleWheel)
+
+const handleTouchMove = (ev) => {
+  const touchMoveY= ev.touches[0].clientY
+
+   if (touchMoveY<touchStartY)
+      gotoNext()
+   else if (touchMoveY>touchStartY)
+      gotoPrev()
+}
+window.addEventListener("touchmove", handleTouchMove)
