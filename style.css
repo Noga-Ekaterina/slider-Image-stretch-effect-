@@ -53,6 +53,7 @@
 @media (max-width: 660px) {
   .slider__item *{
     max-height: 90vw;
+    width: min(100%, 53.57143vh);
   }
 
   .slider__item.active *{
