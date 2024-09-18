@@ -56,6 +56,6 @@
   }
 
   .slider__item.active *{
-    max-height: 100vw;
+    max-height: 106.667vw;
   }
 }
