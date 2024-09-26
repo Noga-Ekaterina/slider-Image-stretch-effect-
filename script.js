@@ -27,13 +27,11 @@ const gotoNum = number => {
       const size= slides[slides.length-1].clientHeight
 
       if (dir=="botton"){
-         averageSlide.nextElementSibling.style.height=`${size-size/3}px`
+         averageSlide.nextElementSibling.classList.add("small")
       }else
-         averageSlide.previousElementSibling.style.height=`${size-size/3}px`
+         averageSlide.previousElementSibling.classList.add("small")
 
-      averageSlide.style.height=`${size+size/3}px`
-      averageSlide.style.maxHeight=`${size+size/3}px`
-
+      averageSlide.classList.add("average")
    }
 
    for (let i =
@@ -41,8 +39,8 @@ const gotoNum = number => {
       slides[i].classList.remove("active");
       slides[i].classList.remove("prev");
       slides[i].classList.remove("next");
-      slides[i].classList.remove("prev-2");
-      slides[i].classList.remove("next-2");
+      slides[i].classList.remove("small");
+      slides[i].classList.remove("average");
       slides[i].style.height=""
       slides[i].style.maxHeight=""
    }

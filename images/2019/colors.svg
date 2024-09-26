@@ -1,0 +1,13 @@
+<svg width="214" height="64" viewBox="0 0 214 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="199.5" cy="14.5" r="14.5" transform="rotate(-90 199.5 14.5)" fill="black"/>
+<circle cx="162.5" cy="14.5" r="13.5" transform="rotate(-90 162.5 14.5)" fill="white" stroke="black" stroke-width="2"/>
+<circle cx="199.5" cy="14.5" r="14.5" transform="rotate(-90 199.5 14.5)" fill="black"/>
+<circle cx="125.5" cy="14.5" r="14.5" transform="rotate(90 125.5 14.5)" fill="#9AEBDC"/>
+<circle cx="88.5" cy="14.5" r="14.5" transform="rotate(90 88.5 14.5)" fill="#D7C0EA"/>
+<circle cx="14.5" cy="14.5" r="14.5" transform="rotate(90 14.5 14.5)" fill="#FCF78C"/>
+<circle cx="51.5" cy="14.5" r="14.5" transform="rotate(90 51.5 14.5)" fill="#F55050"/>
+<circle cx="199.5" cy="49.5" r="14.5" transform="rotate(-90 199.5 49.5)" fill="#5C5B5B"/>
+<circle cx="162.5" cy="49.5" r="14.5" transform="rotate(-90 162.5 49.5)" fill="#E3E2E2"/>
+<circle cx="125.5" cy="49.5" r="14.5" transform="rotate(90 125.5 49.5)" fill="#EDD19C"/>
+<circle cx="88.5" cy="49.5" r="14.5" transform="rotate(90 88.5 49.5)" fill="#55715D"/>
+</svg>
