@@ -110,10 +110,11 @@ p{
 
 .slide-phone__title-block{
   margin-bottom: 44rem;
+  align-items: center;
 }
 
 .slide-phone__title-block--big{
-  margin-bottom: 6rem;
+  margin-bottom: 12rem;
 }
 
 .slide-phone__colors{
@@ -121,7 +122,7 @@ p{
 }
 
 .slide-phone__colors--big{
-  height: 64rem;
+  height: 50rem;
 }
 
 .slide-phone__colors img{
@@ -132,7 +133,7 @@ p{
   width: calc(100% - 626rem - 40rem);
   overflow: hidden;
   position: absolute;
-  bottom: 0;
+  bottom: -5rem;
   left: calc(50% - (100% - 626rem - 40rem)/2);
   display: flex;
   justify-content: center;
@@ -141,7 +142,7 @@ p{
 
 .slide-phone__phone{
   background: #fff;
-  padding-inline: 3rem;
+  padding-inline: 17rem;
   width: 100%;
   display: flex;
   align-items: flex-end;
@@ -168,9 +169,14 @@ p{
 
 .slide-phone__year{
   font-size: 375rem;
-  font-weight: 200;
+  font-weight: 100;
   font-family: "Montserrat Alternates";
   line-height: 0.8em;
+}
+
+.slide-phone__year:last-child{
+  position: relative;
+  right: -27rem;
 }
 
 /*@media (max-width: 1200px) {*/
@@ -238,6 +244,10 @@ p{
 
   .slide-phone__year{
     font-size: 92rem;
+  }
+
+  .slide-phone__year:last-child{
+    right: 0;
   }
 
   .slide-phone__phone-wrapp{
