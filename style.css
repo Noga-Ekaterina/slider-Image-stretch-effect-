@@ -183,6 +183,15 @@ p{
   right: 0;
 }
 
+
+.slide-phone__year-wrapp .slide-phone__year--14{
+  letter-spacing: -0.04em;
+}
+
+.slide-phone__year-wrapp .slide-phone__year--20{
+  letter-spacing: -0.04em;
+}
+
 /*@media (max-width: 1200px) {*/
 /*  html{*/
 /*    font-size: min(100vw/950, 100vh/680);*/
@@ -206,7 +215,7 @@ p{
 
   .slider__container{
     max-height: calc(90vw - 28rem);
-    width: min(100%, 53.57143vh);
+    width: min(100%, 49.8vh);
     display: flex;
     gap: 21rem;
   }
@@ -226,7 +235,7 @@ p{
   }
 
   .slide-phone__title-block{
-    width: 107rem;
+    width: 111rem;
     gap: 8rem;
     align-items: stretch;
   }
@@ -267,5 +276,12 @@ p{
 
   .slide-phone__phone{
     padding-inline: 4rem;
+  }
+}
+
+
+@media (max-width: 640px) and (max-height: 186vw){
+  html{
+    font-size: calc(100vh / 700);
   }
 }
