@@ -13,7 +13,7 @@ html{
 
 p{
   font-size: 17rem;
-  line-height: 1.15em;
+  line-height: 1.25em;
 }
 
 .slider {
@@ -179,6 +179,10 @@ p{
   right: -27rem;
 }
 
+.slide-phone__year-wrapp .slide-phone__year--11{
+  right: 0;
+}
+
 /*@media (max-width: 1200px) {*/
 /*  html{*/
 /*    font-size: min(100vw/950, 100vh/680);*/
@@ -224,10 +228,12 @@ p{
   .slide-phone__title-block{
     width: 107rem;
     gap: 8rem;
+    align-items: stretch;
   }
 
   .slide-phone__title{
     font-size: 13rem;
+    line-height: 18rem;
   }
 
   .slide-phone__colors{
@@ -250,8 +256,16 @@ p{
     right: 0;
   }
 
+  .slide-phone__year-wrapp .slide-phone__year--11{
+    right: 5rem;
+  }
+
   .slide-phone__phone-wrapp{
     width: 163rem;
     left: calc(50% - 81.5rem);
+  }
+
+  .slide-phone__phone{
+    padding-inline: 4rem;
   }
 }
