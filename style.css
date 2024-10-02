@@ -92,6 +92,35 @@ p{
   transform: scaleY(0.2);
 }
 
+.main-slide .slider__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #D9D9D9;
+}
+
+.main-slide *{
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.main-slide__title{
+  font-size: 30rem;
+  font-weight: 600;
+}
+
+.main-slide__bg{
+  position: absolute;
+  inset: -44rem -35rem -30rem;
+  z-index: 1;
+}
+
+.main-slide__bg *{
+  width: 100%;
+}
+
 .slide-phone__text{
   width: 100%;
   display: flex;
@@ -209,6 +238,10 @@ p{
     font-size: calc(100vw / 375);
   }
 
+  .no-sm{
+    display: none;
+  }
+
   .slider__item{
     padding: 17rem 13rem 11rem;
   }
@@ -224,10 +257,16 @@ p{
     max-height: 112vw;
   }
 
+  .main-slide__title{
+    font-size: 20rem;
+    font-weight: 500;
+    width: 200rem;
+  }
+
   .slide-phone__text:not(.slide-phone__year-wrapp){
     flex-direction: column;
     justify-content: flex-start;
-    gap: 12rem;
+    column-gap: 12rem;
   }
 
   p{
@@ -236,7 +275,7 @@ p{
 
   .slide-phone__title-block{
     width: 111rem;
-    gap: 8rem;
+    row-gap: 8rem;
     align-items: stretch;
   }
 
