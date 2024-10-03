@@ -97,6 +97,7 @@ p{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 26rem;
   color: #D9D9D9;
 }
 
@@ -117,17 +118,37 @@ p{
   z-index: 1;
 }
 
+.slide-apple .slider__container{
+  display: flex;
+  align-items: center;
+}
+
+.slide-apple p{
+  width: 297rem;
+}
+
+.slide-apple .slider__text{
+  position: relative;
+}
+
+.slide-apple__img{
+  width: 277rem;
+  position: absolute;
+  bottom: -47rem;
+  left: calc(50% - 138.5rem);
+}
+
 .main-slide__bg *{
   width: 100%;
 }
 
-.slide-phone__text{
+.slider__text{
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.slide-phone__text p{
+.slider__text p{
   width: 313rem;
 }
 
@@ -147,7 +168,7 @@ p{
 }
 
 .slide-phone__colors{
-  height: 28rem;
+  height: 21rem;
 }
 
 .slide-phone__colors--big{
@@ -257,25 +278,48 @@ p{
     max-height: 112vw;
   }
 
+  .main-slide .slider__container{
+    padding-top: 30rem;
+  }
+
+  .main-slide__bg{
+    inset: -17rem -13rem -11rem;
+  }
+
   .main-slide__title{
     font-size: 20rem;
     font-weight: 500;
     width: 200rem;
   }
 
-  .slide-phone__text:not(.slide-phone__year-wrapp){
+  .slider__text:not(.slide-phone__year-wrapp){
     flex-direction: column;
     justify-content: flex-start;
-    column-gap: 12rem;
+    gap: 12rem;
   }
 
   p{
     font-size: 12rem;
   }
 
+  .slide-apple .slider__container{
+    align-items: stretch;
+    justify-content: flex-end;
+  }
+
+  .slide-apple .slider__text{
+    width: 238rem;
+  }
+
+  .slide-apple__img{
+    width: 39rem;
+    left: 79rem;
+    bottom: 0;
+  }
+
   .slide-phone__title-block{
     width: 111rem;
-    row-gap: 8rem;
+    gap: 8rem !important;
     align-items: stretch;
   }
 
@@ -292,7 +336,7 @@ p{
     height: 22rem;
   }
 
-  .slide-phone__text p{
+  .slider__text p{
     width: 238rem;
   }
 
