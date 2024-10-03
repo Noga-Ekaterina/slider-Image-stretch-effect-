@@ -1,9 +1,12 @@
-const slides = document.querySelectorAll(".slider__item");
+let slides = document.querySelectorAll(window.innerWidth<=640?".slider__item" :".slider__item.desktop");
 const slider=document.querySelector(".slider__vrapp")
 
 let current = 0;
 let touchStartY=0
 
+window.addEventListener("resize", ()=>{
+   slides = document.querySelectorAll(window.innerWidth<=640?".slider__item" :".slider__item.desktop");
+})
 window.addEventListener("touchstart", ev => {
    touchStartY= ev.touches[0].clientY
 })

@@ -33,6 +33,7 @@ p{
 .slider__item {
   /*opacity: 0;*/
   padding: 44rem 35rem 30rem;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,6 +43,10 @@ p{
   /*position: absolute;*/
   transition: 0.4s ease-in;
   transition-property: height, max-height, top;
+}
+
+.slider__item--sm{
+  display: none;
 }
 
 .slider__item--dark{
@@ -57,7 +62,7 @@ p{
   position: relative;
   height: calc(60vh - 74rem);
   max-height: 38.2vw;
-  width: min(100%, 118.5vh);
+  width: min(100%, 124vh);
   transform: scaleY(0.3);
   transition: 0.4s ease-in;
 }
@@ -148,22 +153,29 @@ p{
   justify-content: space-between;
 }
 
-.slider__text p{
+.slide-background__col{
+  width: 615rem;
+  display: flex;
+  flex-direction: column;
+  gap: 22rem;
+}
+
+.slide-phone p{
   width: 313rem;
 }
 
-.slide-phone__title{
+.slider__title{
   font-size: 30rem;
   font-weight: 600;
   align-items: baseline;
 }
 
-.slide-phone__title-block{
+.slider__title-block{
   margin-bottom: 44rem;
   align-items: center;
 }
 
-.slide-phone__title-block--big{
+.slider__title-block--big{
   margin-bottom: 12rem;
 }
 
@@ -180,11 +192,11 @@ p{
 }
 
 .slide-phone__phone-wrapp{
-  width: calc(100% - 626rem - 40rem);
+  width: calc(100% - 626rem - 58rem);
   overflow: hidden;
   position: absolute;
   bottom: -5rem;
-  left: calc(50% - (100% - 626rem - 40rem)/2);
+  left: calc(50% - (100% - 626rem - 58rem)/2);
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -267,6 +279,10 @@ p{
     padding: 17rem 13rem 11rem;
   }
 
+  .slider__item--sm{
+    display: block;
+  }
+
   .slider__container{
     max-height: calc(90vw - 28rem);
     width: min(100%, 49.8vh);
@@ -317,15 +333,28 @@ p{
     bottom: 0;
   }
 
-  .slide-phone__title-block{
+  .slider__title-block{
     width: 111rem;
+    max-width: 111rem;
     gap: 8rem !important;
     align-items: stretch;
   }
 
-  .slide-phone__title{
+  .slider__title{
     font-size: 13rem;
     line-height: 18rem;
+  }
+
+  .slide-background__title{
+    transform: rotate(-90deg);
+    position: relative;
+    left: -50%;
+    top: 48rem;
+  }
+
+  .slide-background .slider__text{
+    width: 238rem;
+    flex-shrink: 0;
   }
 
   .slide-phone__colors{
@@ -336,7 +365,7 @@ p{
     height: 22rem;
   }
 
-  .slider__text p{
+  .slider__text p {
     width: 238rem;
   }
 
