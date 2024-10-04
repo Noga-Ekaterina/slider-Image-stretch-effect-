@@ -336,8 +336,10 @@ p{
   .slider__title-block{
     width: 113rem;
     max-width: 113rem;
+    min-width: 10ch;
     gap: 8rem !important;
     align-items: stretch;
+    font-size: 13rem;
   }
 
   .slider__title{
