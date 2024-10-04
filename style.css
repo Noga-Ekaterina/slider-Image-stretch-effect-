@@ -16,6 +16,10 @@ p{
   line-height: 1.25em;
 }
 
+.no-md{
+  display: none;
+}
+
 .slider {
   width: 100vw;
   height: 100vh;
@@ -273,6 +277,10 @@ p{
 
   .no-sm{
     display: none;
+  }
+
+  .no-md{
+    display: block;
   }
 
   .slider__item{
