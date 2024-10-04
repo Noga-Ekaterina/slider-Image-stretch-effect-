@@ -102,7 +102,7 @@ p{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 26rem;
+  padding-bottom: 14rem;
   color: #D9D9D9;
 }
 
@@ -276,11 +276,11 @@ p{
   }
 
   .slider__item{
-    padding: 17rem 13rem 11rem;
+    padding: 17rem 13rem 14rem;
   }
 
   .slider__item--sm{
-    display: block;
+    display: flex;
   }
 
   .slider__container{
@@ -295,11 +295,11 @@ p{
   }
 
   .main-slide .slider__container{
-    padding-top: 30rem;
+    padding-block: 30rem 26rem;
   }
 
   .main-slide__bg{
-    inset: -17rem -13rem -11rem;
+    inset: -17rem -13rem -14rem;
   }
 
   .main-slide__title{
@@ -330,12 +330,12 @@ p{
   .slide-apple__img{
     width: 39rem;
     left: 79rem;
-    bottom: 0;
+    bottom: 10rem;
   }
 
   .slider__title-block{
-    width: 111rem;
-    max-width: 111rem;
+    width: 113rem;
+    max-width: 113rem;
     gap: 8rem !important;
     align-items: stretch;
   }
@@ -348,13 +348,17 @@ p{
   .slide-background__title{
     transform: rotate(-90deg);
     position: relative;
-    left: -50%;
-    top: 48rem;
+    left: -47%;
+    top: 41rem;
   }
 
   .slide-background .slider__text{
     width: 238rem;
     flex-shrink: 0;
+  }
+
+  .slide-background__col{
+    gap: 12rem;
   }
 
   .slide-phone__colors{
