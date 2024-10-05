@@ -80,7 +80,7 @@ p{
 
 .slider__item.active .slider__container{
   height: 100%;
-  max-height: 47.2vw;
+  max-height: 44.2vw;
   transform: scaleY(1);
 }
 
@@ -245,6 +245,7 @@ p{
   right: -27rem;
 }
 
+.slide-phone__year-wrapp .slide-phone__year--7,
 .slide-phone__year-wrapp .slide-phone__year--11{
   right: 0;
 }
