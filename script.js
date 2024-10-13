@@ -2,6 +2,7 @@ let slides = document.querySelectorAll(window.innerWidth<=640?".slider__item" :"
 const slider=document.querySelector(".slider__vrapp")
 
 let current = 0;
+let pause = false; // Флаг для отслеживания движения
 let touchStartY=0
 
 window.addEventListener("resize", ()=>{
@@ -9,6 +10,7 @@ window.addEventListener("resize", ()=>{
 })
 window.addEventListener("touchstart", ev => {
    touchStartY= ev.touches[0].clientY
+   console.log('touch start')
 })
 
 document.addEventListener('DOMContentLoaded',()=>{
@@ -20,11 +22,9 @@ const gotoPrev = () => current > 0 && gotoNum(current - 1);
 const gotoNext = () => current < slides.length - 1 && gotoNum(current + 1);
 
 const gotoNum = number => {
-   current = number;
-   prev = current - 1;
-   next = current + 1;
-   prev2 = current - 2;
-   next2 = current + 2;
+   if (pause) return
+   else
+      current = number;
    const resizeSlides = (dir) => {
       const averageSlide= slides[dir=="botton"? current+1:current-1]
       const size= slides[slides.length-1].clientHeight
@@ -49,10 +49,14 @@ const gotoNum = number => {
    }
 
    touchStartY=undefined
+   pause=true
 
-   window.removeEventListener("wheel", handleWheel)
+   // window.removeEventListener("wheel", handleWheel)
+   // window.removeEventListener("touchmove", handleTouchMove)
    setTimeout(()=>{
-      window.addEventListener("wheel", handleWheel)
+      // window.addEventListener("wheel", handleWheel)
+      // window.addEventListener("touchmove", handleTouchMove)
+      pause=false
    }, 500)
 
    if (current>0 && current<slides.length-1){
@@ -74,6 +78,8 @@ const gotoNum = number => {
 
 
 const handleWheel = (ev) => {
+   console.log(pause)
+   if (pause) return;
 
    if (ev.deltaY>0)
       gotoNext()
@@ -90,4 +96,6 @@ const handleTouchMove = (ev) => {
    else if (touchMoveY>touchStartY)
       gotoPrev()
 }
-window.addEventListener("touchmove", handleTouchMove)
+
+window.addEventListener("touchmove", handleTouchMove);
+window.addEventListener("touchend", handleTouchEnd)
